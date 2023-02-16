@@ -1,8 +1,10 @@
+import styles from 'styles/hero.module.css'
+
 export default function Hero ({ title, subtitle, imageOn = false }) {
   return (
-    <div>
-      <h1>CUBE</h1>
-      <p>アウトプットしていくサイト</p>
+    <div className={styles.text}>
+      <h1 className={styles.title}>CUBE</h1>
+      <p className={styles.subtitle}>アウトプットしていくサイト</p>
       {imageOn && <figure> [画像] </figure>}
     </div>
   )
