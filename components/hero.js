@@ -18,6 +18,10 @@ export default function Hero ({ title, subtitle, imageOn = false }) {
             sizes='(min-width: 1152px) 726px, (min-width: 768px) 50vw,100vw '
             priority
             placeholder='blur'
+            style={{
+              width: '100%',
+              height: 'auto'
+            }}
           />
         </figure>
       )}
