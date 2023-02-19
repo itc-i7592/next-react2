@@ -1,7 +1,6 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
-
 import { siteMeta } from 'lib/constans'
+import { useRouter } from 'next/router'
 const {
   siteTitle,
   siteDesc,
@@ -10,6 +9,7 @@ const {
   siteType,
   siteIcon
 } = siteMeta
+
 import siteImg from 'images/ogp.jpg'
 
 export default function Meta ({
@@ -20,6 +20,7 @@ export default function Meta ({
   pageImgH
 }) {
   const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle
+
   const desc = pageDesc ?? siteDesc
 
   const router = useRouter()
@@ -35,11 +36,10 @@ export default function Meta ({
       <title>{title}</title>
       <meta property='og:title' content={title} />
 
-      <link rel='canonical' href={url} />
-      <meta property='og:url' content={url} />
-
       <meta name='description' content={desc} />
       <meta property='og:description' content={desc} />
+      <iink rel='canonical' href={url} />
+      <meta property='og:url' content={url} />
 
       <meta property='og:site_name' content={siteTitle} />
       <meta property='og:type' content={siteType} />
@@ -47,11 +47,10 @@ export default function Meta ({
 
       <link rel='icon' href={siteIcon} />
       <link rel='apple-touch-icon' href={siteIcon} />
-
       <meta property='og:image' content={imgUrl} />
       <meta property='og:image:width' content={imgW} />
       <meta property='og:image:height' content={imgH} />
-      <meta property='twitter:card' content='summary_large_image' />
+      <meta name='twitter:card' content='summary_large_image' />
     </Head>
   )
 }
