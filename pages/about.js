@@ -11,9 +11,14 @@ import TwoColumn from 'components/two-column'
 export default function About () {
   return (
     <Container>
-      <Meta pageTitle='アバウト' />
-      <Hero title='About' subtitle='About development activities' />
-
+      <Meta pageTitle='アバウト' pageDesc='About development activities' />
+      <Hero
+        title='About'
+        subtitle='About development activities'
+        pageImg={eyecatch.src}
+        pageImgW={eyecatch.width}
+        pageImgH={eyecatch.height}
+      />
       <figure>
         <Image
           src={eyecatch}
